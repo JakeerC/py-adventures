@@ -7,8 +7,6 @@ from sqlalchemy import (
     JSON,
     ForeignKey,
 )
-
-
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
 
@@ -23,14 +21,6 @@ class Story(Base):
     session_id = Column(String, index=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     nodes = relationship("StoryNode", back_populates="story")
-
-    # content = Column(Text)
-    # updated_at = Column(DateTime(timezone=True), onupdate=func.now())
-    # is_published = Column(Boolean, default=False)
-    # metadata = Column(JSON)
-
-    # author_id = Column(Integer, ForeignKey("users.id"))
-    # author = relationship("User", back_populates="stories")
 
 
 class StoryNode(Base):

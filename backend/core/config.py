@@ -4,6 +4,24 @@ from pydantic import field_validator
 
 
 class Settings(BaseSettings):
+    """
+    A configuration class for handling application settings.
+
+    The Settings class provides a centralized way to manage application-wide configurations.
+    It includes options for API routing, debugging, CORS settings, database connections,
+    and OpenAI API integration.
+
+    Attributes:
+        API_PREFIX (str): The prefix for all API endpoints.
+        DEBUG (bool): A flag to enable or disable debug mode.
+        ALLOWED_ORIGINS (str): Comma-separated string of allowed origins for CORS.
+        DATABASE_URL (str): Connection URL for the database.
+        OPENAI_API_KEY (str): API key for OpenAI integration (should be set via .env file).
+
+    The class also includes validation for allowed origins and configuration for loading
+    environment variables from a .env file with UTF-8 encoding.
+    """
+
     API_PREFIX: str = "/api"
     DEBUG: bool = False
 
