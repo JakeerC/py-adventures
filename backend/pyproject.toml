@@ -7,6 +7,7 @@ requires-python = ">=3.10"
 dependencies = [
     "fastapi[all]>=0.116.2",
     "sqlalchemy>=2.0.43",
+    "uuid>=1.30",
 ]
 
 [dependency-groups]
