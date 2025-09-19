@@ -4,7 +4,10 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = ["fastapi[all]>=0.116.2"]
+dependencies = [
+    "fastapi[all]>=0.116.2",
+    "sqlalchemy>=2.0.43",
+]
 
 [dependency-groups]
 dev = ["uvicorn>=0.35.0"]
