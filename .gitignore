@@ -8,3 +8,13 @@ wheels/
 
 # Virtual environments
 .venv
+
+.env
+
+# IDE files
+.vscode/
+
+# macOS files
+.DS_Store
+**/**/.DS_Store
+backend/.DS_Store
