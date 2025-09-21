@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     API_PREFIX: str = "/api"
     DEBUG: bool = False
     DATABASE_URL: str = "sqlite://:memory:"
-    OPENAI_API_KEY: str = ""
+    GEMINI_API_KEY: str = ""
 
     class Config:
         env_file = ".env"

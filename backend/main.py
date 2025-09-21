@@ -3,6 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from routers import story, job
 from core.config import settings
+from db.database import create_tables
+
+create_tables()
 
 app = FastAPI(
     title="My API",
